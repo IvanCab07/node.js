@@ -1,0 +1,34 @@
+que es node js es un entorno de ejecucion de javascrip fuera de el navegador
+
+npm node proyec manager sirve par inicializar nuestro proyecto y instalar modulos librerias de terceros
+
+npm init -y
+
+npm i express
+
+express es un framework
+
+pasos para crear un proyecto
+
+1:  reamos carpeta del proyecto
+
+2:npm init -y ==> inicia el proyecto y crea la archivo packaje.json
+
+3: en packaje json modificamos type = "module"
+agregamos script   "start": "node index.js"
+
+4:npm (express) instalamos express
+
+5:cremos servidor sevidor express
+
+const express = require('express')
+const app = express()
+const port = 3000
+app.get('/', (req, res) => {
+res.send('Hello World!');
+});
+app.listen(port, () => {
+    console.log(`servidor escuchando en http://localhost:${port}`)
+})
+
+6: npm star para ejecutar el proyecto
